@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Paneli</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .panel {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    .panel h2 {
+      margin-bottom: 15px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-group button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin Paneli</h1>
+  </header>
+  <div class="container">
+    <!-- Ürün Ekle Paneli -->
+    <div class="panel">
+      <h2>Ürün Ekle</h2>
+      <div class="form-group">
+        <label for="product-name">Ürün Adı:</label>
+        <input type="text" id="product-name" placeholder="Ürün adı girin">
+      </div>
+      <div class="form-group">
+        <label for="product-price">Ürün Fiyatı:</label>
+        <input type="number" id="product-price" placeholder="Ürün fiyatını girin">
+      </div>
+      <div class="form-group">
+        <label for="product-description">Ürün Açıklaması:</label>
+        <textarea id="product-description" placeholder="Ürün açıklamasını girin"></textarea>
+      </div>
+      <div class="form-group">
+        <button onclick="addProduct()">Ürün Ekle</button>
+      </div>
+    </div>
+
+    <!-- Kampanya Ekle Paneli -->
+    <div class="panel">
+      <h2>Kampanya Ekle</h2>
+      <div class="form-group">
+        <label for="campaign-name">Kampanya Adı:</label>
+        <input type="text" id="campaign-name" placeholder="Kampanya adı girin">
+      </div>
+      <div class="form-group">
+        <label for="campaign-description">Kampanya Açıklaması:</label>
+        <textarea id="campaign-description" placeholder="Kampanya açıklamasını girin"></textarea>
+      </div>
+      <div class="form-group">
+        <button onclick="addCampaign()">Kampanya Ekle</button>
+      </div>
+    </div>
+
+    <!-- Misyon/Vizyon Değiştir Paneli -->
+    <div class="panel">
+      <h2>Misyon/Vizyon Değiştir</h2>
+      <div class="form-group">
+        <label for="mission">Misyon:</label>
+        <textarea id="mission" placeholder="Misyonu girin"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="vision">Vizyon:</label>
+        <textarea id="vision" placeholder="Vizyonu girin"></textarea>
+      </div>
+      <div class="form-group">
+        <button onclick="updateMissionVision()">Misyon/Vizyon Güncelle</button>
+      </div>
+    </div>
+  </div>
+
+ 
+</body>
+</html>
